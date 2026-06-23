@@ -1,0 +1,617 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Atoyebi Micheal Ademola | DevOps Engineer Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#ffb38a;
+    --secondary:#ffc8a8;
+    --accent:#ff8f66;
+    --glass:rgba(255,255,255,0.15);
+    --text:#2f2f2f;
+    --white:#ffffff;
+    --shadow:0 15px 40px rgba(0,0,0,0.12);
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff8f4;
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+section{
+    padding:90px 8%;
+}
+
+h2{
+    text-align:center;
+    font-size:2.4rem;
+    margin-bottom:50px;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:150%;
+    height:150%;
+    background:linear-gradient(
+        -45deg,
+        #ffd6bf,
+        #ffb996,
+        #ffd8c4,
+        #ff9f78
+    );
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+    z-index:-2;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(10px);
+    z-index:-1;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:800;
+    color:#222;
+}
+
+.hero h3{
+    font-size:1.4rem;
+    margin:20px 0;
+    color:#444;
+}
+
+.hero p{
+    font-size:1rem;
+    color:#555;
+    margin-bottom:35px;
+}
+
+.btn-group{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:var(--accent);
+    color:white;
+}
+
+.btn-secondary{
+    background:white;
+    color:#333;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+/* =====================
+   GLASS CARD
+===================== */
+
+.glass-card{
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:20px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+/* =====================
+   ABOUT
+===================== */
+
+.about{
+    text-align:center;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+/* =====================
+   GRID
+===================== */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:var(--shadow);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card i{
+    font-size:2.5rem;
+    color:var(--accent);
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* =====================
+   PROJECT
+===================== */
+
+.project-card{
+    max-width:1000px;
+    margin:auto;
+}
+
+.project-card ul{
+    list-style:none;
+}
+
+.project-card li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+
+.project-card li i{
+    color:green;
+    margin-right:10px;
+}
+
+/* =====================
+   STATS
+===================== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat{
+    text-align:center;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+}
+
+.stat h3{
+    font-size:2rem;
+    color:var(--accent);
+}
+
+/* =====================
+   TIMELINE
+===================== */
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-left:6px solid var(--accent);
+    border-radius:12px;
+    box-shadow:var(--shadow);
+}
+
+/* =====================
+   CONTACT
+===================== */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin-bottom:25px;
+    font-size:1.1rem;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.socials a{
+    text-decoration:none;
+    color:white;
+    background:var(--accent);
+    padding:15px 30px;
+    border-radius:50px;
+    transition:.4s;
+}
+
+.socials a:hover{
+    transform:translateY(-5px);
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+footer{
+    background:#f6d4c4;
+    text-align:center;
+    padding:30px;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.7rem;
+}
+
+.hero h3{
+    font-size:1.1rem;
+}
+
+h2{
+    font-size:2rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Atoyebi Micheal Ademola</h1>
+
+<h3>
+DevOps Engineer | Cloud Enthusiast | CodeAlpha Intern
+</h3>
+
+<p>
+Building scalable cloud infrastructure, automating deployments,
+and delivering reliable solutions through DevOps best practices.
+</p>
+
+<div class="btn-group">
+<a href="#project" class="btn btn-primary">
+View Project
+</a>
+
+<a href="#contact" class="btn btn-secondary">
+Contact Me
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2>About Me</h2>
+
+<div class="glass-card">
+
+<p>
+I am Atoyebi Micheal Ademola, a passionate DevOps and Cloud Engineer
+with a strong interest in Docker, AWS, Linux, CI/CD automation,
+infrastructure management, and cloud-native technologies.
+I enjoy building scalable systems, automating deployment pipelines,
+and continuously learning modern DevOps practices that improve
+efficiency, reliability, and performance.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section>
+
+<h2>Skills</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-brands fa-docker"></i>
+<h3>Docker</h3>
+</div>
+
+<div class="card">
+<i class="fa-brands fa-aws"></i>
+<h3>AWS</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-gears"></i>
+<h3>Jenkins</h3>
+</div>
+
+<div class="card">
+<i class="fa-brands fa-linux"></i>
+<h3>Linux</h3>
+</div>
+
+<div class="card">
+<i class="fa-brands fa-github"></i>
+<h3>GitHub</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-server"></i>
+<h3>Nginx</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-code-branch"></i>
+<h3>CI/CD</h3>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-code"></i>
+<h3>VS Code</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECT -->
+
+<section id="project">
+
+<h2>Task 4: Web Server Using Docker</h2>
+
+<div class="glass-card project-card">
+
+<ul>
+
+<li><i class="fa-solid fa-check"></i>Docker Containerization</li>
+
+<li><i class="fa-solid fa-check"></i>Nginx Web Server Deployment</li>
+
+<li><i class="fa-solid fa-check"></i>Dockerfile Configuration</li>
+
+<li><i class="fa-solid fa-check"></i>Custom Image Creation</li>
+
+<li><i class="fa-solid fa-check"></i>Port Mapping Configuration</li>
+
+<li><i class="fa-solid fa-check"></i>Container Lifecycle Management</li>
+
+<li><i class="fa-solid fa-check"></i>Monitoring with Docker Logs</li>
+
+<li><i class="fa-solid fa-check"></i>Docker Inspect Usage</li>
+
+<li><i class="fa-solid fa-check"></i>Docker Stats Monitoring</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section>
+
+<h2>Achievement Statistics</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h3>5+</h3>
+<p>Docker Containers Managed</p>
+</div>
+
+<div class="stat">
+<h3>3+</h3>
+<p>Custom Images Built</p>
+</div>
+
+<div class="stat">
+<h3>8+</h3>
+<p>Technologies Used</p>
+</div>
+
+<div class="stat">
+<h3>3</h3>
+<p>Monitoring Tools Used</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TIMELINE -->
+
+<section>
+
+<h2>Project Timeline</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+HTML Development
+</div>
+
+<div class="timeline-item">
+Dockerfile Creation
+</div>
+
+<div class="timeline-item">
+Image Build
+</div>
+
+<div class="timeline-item">
+Container Deployment
+</div>
+
+<div class="timeline-item">
+Monitoring & Validation
+</div>
+
+<div class="timeline-item">
+Successful Completion
+</div>
+
+</div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section>
+
+<h2>Tools & Technologies</h2>
+
+<div class="grid">
+
+<div class="card">Docker</div>
+<div class="card">Nginx</div>
+<div class="card">Linux</div>
+<div class="card">GitHub</div>
+<div class="card">AWS</div>
+<div class="card">VS Code</div>
+<div class="card">CI/CD</div>
+<div class="card">Docker CLI</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<h2>Contact</h2>
+
+<p>
+📧 Email: Fhelo3030@gmail.com
+</p>
+
+<div class="socials">
+
+<a href="#">
+<i class="fa-brands fa-github"></i>
+GitHub
+</a>
+
+<a href="#">
+<i class="fa-brands fa-linkedin"></i>
+LinkedIn
+</a>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+Designed & Developed by Atoyebi Micheal Ademola
+</p>
+
+<p>
+CodeAlpha Internship 2026
+</p>
+
+</footer>
+
+</body>
+</html>
+```
